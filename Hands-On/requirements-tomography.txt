@@ -1,0 +1,7 @@
+# Minimal requirements for Lya_forest_3D_tomography.ipynb
+numpy
+scipy
+matplotlib
+astropy
+torch
+jupyterlab
