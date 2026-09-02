@@ -12,3 +12,4 @@ dependencies:
   - jupyterlab
   - ipykernel
   - nbconvert
+  - pip
