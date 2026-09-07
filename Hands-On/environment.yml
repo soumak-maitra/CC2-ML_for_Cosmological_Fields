@@ -9,6 +9,7 @@ dependencies:
   - scipy
   - astropy
   - matplotlib
+  - pytorch
   - jupyterlab
   - ipykernel
   - nbconvert

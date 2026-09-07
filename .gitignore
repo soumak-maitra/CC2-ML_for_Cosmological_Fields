@@ -1,2 +1,5 @@
 # Downloaded CAMELS simulation data
 Hands-On/Sims/
+
+# Supplementary experiment kept out of version control
+Hands-On/Lya_forest_autoencoder_vs_PCA.ipynb
