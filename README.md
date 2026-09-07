@@ -32,16 +32,25 @@ With the environment active, run:
 python -m ipykernel install --user --name camels-hands-on --display-name "Python (camels-hands-on)"
 ```
 
-### 4. Start JupyterLab
+### 4. Open the notebooks
 
-From the `Hands-On` directory, run:
+You can use any application that supports Jupyter notebooks. **Visual Studio Code is a convenient choice for beginners** because it combines the notebooks, files, terminal, and plots in one window:
+
+1. Install [Visual Studio Code](https://code.visualstudio.com/).
+2. Install the **Python** and **Jupyter** extensions from its Extensions panel.
+3. Open this repository in VS Code and select a `.ipynb` file from the `Hands-On` folder.
+4. Click the kernel name near the top-right of the notebook and choose **Python (camels-hands-on)**.
+
+If you prefer a browser-based interface, activate the environment, enter the `Hands-On` directory, and start JupyterLab:
 
 ```bash
+conda activate camels-hands-on
+cd Hands-On
 jupyter lab
 ```
 
-Open the notebook for the current session. If Jupyter asks for a kernel, choose **Python (camels-hands-on)**. Run cells in order with **Shift+Enter**; some calculations may take a little while to finish.
+Other notebook applications are also fine as long as they let you select the **Python (camels-hands-on)** kernel. Run cells in order with **Shift+Enter**; some calculations may take a little while to finish.
 
 The notebooks expect the course data in `Hands-On/Sims/CMD_z=2_grid128`. If that folder is missing, obtain the dataset from the course instructor and place the supplied `.npy` files there before running the notebooks.
 
-To stop JupyterLab, return to the terminal and press **Ctrl+C**. To leave the Conda environment, run `conda deactivate`.
+If you started JupyterLab, stop it by returning to the terminal and pressing **Ctrl+C**. To leave the Conda environment, run `conda deactivate`.
