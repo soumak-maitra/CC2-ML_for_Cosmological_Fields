@@ -42,6 +42,7 @@ Only the IllustrisTNG CV, $128^3$, $z=2$ grids below are required:
 - `Grids_Mcdm_IllustrisTNG_CV_128_z=2.0.npy`
 - `Grids_HI_IllustrisTNG_CV_128_z=2.0.npy`
 - `Grids_T_IllustrisTNG_CV_128_z=2.0.npy`
+- `Grids_Vgas_IllustrisTNG_CV_128_z=2.0.npy` — used by the visualization notebook
 
 Place the downloaded files in `Hands-On/Sims/CMD_z=2_grid128` without changing their names. You do not need to download the full CMD 3D-grid collection.
 
@@ -58,7 +59,8 @@ CC2-ML_for_Cosmological_Fields/
     │       ├── Grids_Mgas_IllustrisTNG_CV_128_z=2.0.npy
     │       ├── Grids_Mcdm_IllustrisTNG_CV_128_z=2.0.npy
     │       ├── Grids_HI_IllustrisTNG_CV_128_z=2.0.npy
-    │       └── Grids_T_IllustrisTNG_CV_128_z=2.0.npy
+    │       ├── Grids_T_IllustrisTNG_CV_128_z=2.0.npy
+    │       └── Grids_Vgas_IllustrisTNG_CV_128_z=2.0.npy
     └── trained_models/
         ├── lya_forest_unet_density.pt
         └── lya_forest_conditional_ddpm.pt
