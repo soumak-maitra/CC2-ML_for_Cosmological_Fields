@@ -32,7 +32,41 @@ With the environment active, run:
 python -m ipykernel install --user --name camels-hands-on --display-name "Python (camels-hands-on)"
 ```
 
-### 4. Open the notebooks
+### 4. Download the CAMELS Multifield Dataset
+
+These notebooks use a small subset of the three-dimensional grids from the [CAMELS Multifield Dataset (CMD)](https://camels-multifield-dataset.readthedocs.io/en/latest/). Download the data through the official [CMD data-access page](https://camels-multifield-dataset.readthedocs.io/en/latest/access.html); Globus is recommended there for faster and more reliable transfer of large files.
+
+Only the IllustrisTNG CV, $128^3$, $z=2$ grids below are required:
+
+- `Grids_Mgas_IllustrisTNG_CV_128_z=2.0.npy`
+- `Grids_Mcdm_IllustrisTNG_CV_128_z=2.0.npy`
+- `Grids_HI_IllustrisTNG_CV_128_z=2.0.npy`
+- `Grids_T_IllustrisTNG_CV_128_z=2.0.npy`
+
+Place the downloaded files in `Hands-On/Sims/CMD_z=2_grid128` without changing their names. You do not need to download the full CMD 3D-grid collection.
+
+After downloading the data and running the training notebooks, the relevant directory structure should look like this:
+
+```text
+CC2-ML_for_Cosmological_Fields/
+├── README.md
+└── Hands-On/
+    ├── environment.yml
+    ├── *.ipynb
+    ├── Sims/
+    │   └── CMD_z=2_grid128/
+    │       ├── Grids_Mgas_IllustrisTNG_CV_128_z=2.0.npy
+    │       ├── Grids_Mcdm_IllustrisTNG_CV_128_z=2.0.npy
+    │       ├── Grids_HI_IllustrisTNG_CV_128_z=2.0.npy
+    │       └── Grids_T_IllustrisTNG_CV_128_z=2.0.npy
+    └── trained_models/
+        ├── lya_forest_unet_density.pt
+        └── lya_forest_conditional_ddpm.pt
+```
+
+The `Sims` directory contains the downloaded input data. The `trained_models` directory is created automatically when the neural-network notebooks save their trained models; you do not need to create model files manually.
+
+### 5. Open the notebooks
 
 You can use any application that supports Jupyter notebooks. **Visual Studio Code is a convenient choice for beginners** because it combines the notebooks, files, terminal, and plots in one window:
 
@@ -50,8 +84,6 @@ jupyter lab
 ```
 
 Other notebook applications are also fine as long as they let you select the **Python (camels-hands-on)** kernel. Run cells in order with **Shift+Enter**; some calculations may take a little while to finish.
-
-The notebooks expect the course data in `Hands-On/Sims/CMD_z=2_grid128`. If that folder is missing, obtain the dataset from the course instructor and place the supplied `.npy` files there before running the notebooks.
 
 Run `Lya_forest_neural_vs_FGPA_improved.ipynb` before `Lya_forest_conditional_DDPM_inversion.ipynb`. The first notebook saves its trained U-Net, which the DDPM exercise loads for sightline and summary-statistic comparisons without retraining it.
 
