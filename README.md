@@ -1,6 +1,6 @@
 # Machine Learning for Cosmological Fields
 
-These hands-on sessions use CAMELS simulation fields and Lyα-forest spectra to build intuition for scientific machine learning. You will visualize three-dimensional cosmological data, generate mock spectra, reconstruct physical fields with analytic and neural methods, train a multi-task U-Net, and create a tomographic map from sparse sightlines.
+These hands-on sessions use CAMELS simulation fields and Lyα-forest spectra to build intuition for scientific machine learning. You will visualize three-dimensional cosmological data, generate mock spectra, reconstruct physical fields with analytic and neural methods, train a multi-task U-Net, create a tomographic map from sparse sightlines, and explore probabilistic reconstruction with a conditional denoising diffusion model (DDPM).
 
 ## Beginner-friendly setup
 
@@ -52,5 +52,7 @@ jupyter lab
 Other notebook applications are also fine as long as they let you select the **Python (camels-hands-on)** kernel. Run cells in order with **Shift+Enter**; some calculations may take a little while to finish.
 
 The notebooks expect the course data in `Hands-On/Sims/CMD_z=2_grid128`. If that folder is missing, obtain the dataset from the course instructor and place the supplied `.npy` files there before running the notebooks.
+
+Run `Lya_forest_neural_vs_FGPA_improved.ipynb` before `Lya_forest_conditional_DDPM_inversion.ipynb`. The first notebook saves its trained U-Net, which the DDPM exercise loads for sightline and summary-statistic comparisons without retraining it.
 
 If you started JupyterLab, stop it by returning to the terminal and pressing **Ctrl+C**. To leave the Conda environment, run `conda deactivate`.
